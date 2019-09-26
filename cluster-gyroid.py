@@ -97,7 +97,6 @@ def nmaxA(frame):
                     gyrind.append(nump)
             gyrlike[p4]=ngyr
             if ngyr!=0: gyrind.append(p4)
-            #if p4==70: gyrindsave=gyrind
             #########################################
             if gyrlike[p4]>5:
                 countgyr[p4]=1
