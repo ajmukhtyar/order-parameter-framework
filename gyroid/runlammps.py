@@ -8,7 +8,7 @@ import B_cluster
 j=50
 f1=open("totord.txt","w",0)
 f2=open("thermooutput.txt","w",0)
-lmp.file("control2.dpd")
+lmp.file("control.dpd")
 
 while j<10000000000:
 	lmp.command("run 50")
