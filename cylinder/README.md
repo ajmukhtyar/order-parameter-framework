@@ -1,3 +1,5 @@
+# Cylinder Phase Order Parameter 
+
 Code uses Python v2.7 and VMD to run
 
 For any given LAMMPS trajectory, the number of ordered (cylinder) particles can be found by running the following commands
