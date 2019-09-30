@@ -10,7 +10,6 @@ This bash script uses VMD to return information about the coordinates, atom type
 
 It also calculate the Q6 bond order parameter for every particle through files A/B_controlq.dpd which gets stored in the respective dump files. 
 
-2. python A_cluster.py 
-   python B_cluster.py
+2. python A/B_cluster.py 
 
 This calculates the gyroid signature vector for every particle and uses a clustering algorithm to find the size of the largest ordered nucleus. Information is stored in output. 
