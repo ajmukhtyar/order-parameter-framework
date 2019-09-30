@@ -1,7 +1,7 @@
 units       real
 atom_style  full 
 pair_style  sw 
-read_data   BQQQQ.data
+read_data   B.data
 
 comm_modify vel yes
 
@@ -21,7 +21,7 @@ compute myBond all orientorder/atom degrees 1 6 components 6 nnn NULL cutoff 3
 
 thermo_style custom step temp epair emol etotal press vol lx ly lz 
 
-dump 1 all custom 1 B_dumpQQQQ.xyz id type c_myBond[*] 
+dump 1 all custom 1 B_dump.xyz id type c_myBond[*] 
 
-rerun BQQQQ.lammpstrj dump x y z 
+rerun B.lammpstrj dump x y z 
 

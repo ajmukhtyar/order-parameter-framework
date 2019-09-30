@@ -1,0 +1,7 @@
+Got cluster information
+Total ordered particles
+44
+Three largest clusters
+1.0 1.0 0.0
+No of particles in each
+44 0 0

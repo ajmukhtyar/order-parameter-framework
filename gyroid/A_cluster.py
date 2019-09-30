@@ -163,5 +163,7 @@ def nmaxA(frame):
             size=counts[counts.argsort()[-1]]
     return size
 
-if __name__ == "__main__":
-        nmaxA()
+#if __name__ == "__main__":
+#        nmaxA()
+
+nmaxA('A')

@@ -8,7 +8,7 @@ Created on Tue Oct 24 17:54:25 2017
 def nmaxB(frame):
     import numpy as np
     Natoms=6912
-    f1=open("B_dump%s.xyz" %frame)
+    f1=open("dump%s.xyz" %frame)
     index = np.zeros(Natoms)
     Qlm_real=[[] for i in range(Natoms)]
     Qlm_im=[[] for i in range(Natoms)]
@@ -31,13 +31,13 @@ def nmaxB(frame):
         p=p+1
         
     atomtype=np.zeros(Natoms)
-    f2=open("B_atomtype%s.txt" %frame)
+    f2=open("atomtype%s.txt" %frame)
     p1=0
     for line1 in f2:
         atomtype[p1]=float(line1.split()[1])
         p1=p1+1
     
-    f3=open("B_sameneigh%s.txt" %frame)
+    f3=open("sameneigh%s.txt" %frame)
     p2=0
     nlist=[[] for i in range(Natoms)]
     for line2 in f3: 
@@ -71,13 +71,13 @@ def nmaxB(frame):
     clus=np.zeros(int(Natoms))
     gyrlike=np.zeros(int(Natoms))
     output=open("B_output%s.txt" %frame,"w",0)
-    f1=open("B_atomtype%s.txt" %frame)
+    f1=open("atomtype%s.txt" %frame)
     p1=0
     for line1 in f1:
         atomtype[p1]=float(line1.split()[1])
         p1=p1+1
     p4=0
-    f2=open("B_sameneigh%s.txt" %frame)
+    f2=open("sameneigh%s.txt" %frame)
     countgyr=np.zeros(Natoms)
     count=0
     for line3 in f2:
@@ -103,7 +103,7 @@ def nmaxB(frame):
                 count=count+1
             p4=p4+1
     
-    f3=open("B_sameneigh%s.txt" %frame)
+    f3=open("sameneigh%s.txt" %frame)
     p5=0
     #tryx=1
     for line4 in f3:
@@ -165,5 +165,7 @@ def nmaxB(frame):
             size=counts[counts.argsort()[-1]]
     return size
 
-if __name__ == "__main__":
-        nmaxB()
+#if __name__ == "__main__":
+#        nmaxB()
+
+nmaxB('B')
